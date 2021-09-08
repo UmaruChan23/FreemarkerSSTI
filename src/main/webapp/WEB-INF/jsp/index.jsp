@@ -19,8 +19,8 @@
     <sec:authorize access="isAuthenticated()">
         <h4><a href="/logout">Выйти</a></h4>
     </sec:authorize>
-    <h4><a href="/hello">Новости</a></h4>
-    <h4><a href="/admin">Пользователи (только админ)</a></h4>
+    <h4><a href="/hello">Сменить пароль</a></h4>
+    <h4><a href="/news">Новости</a></h4>
 </div>
 </body>
 </html>
