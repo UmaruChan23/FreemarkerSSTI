@@ -60,7 +60,7 @@
             <a href="/logout">Выйти</a>
         </sec:authorize>
         <a href="/hello">Главная</a>
-        <a href="/news">Новости</a>
+        <a href="/news">Форум</a>
     </div>
 </div>
 </body>

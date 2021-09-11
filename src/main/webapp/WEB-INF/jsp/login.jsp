@@ -24,7 +24,7 @@
         }
 
         .login_form input {
-            margin-left: 5px;
+            margin-left: 12px;
             color: black;
             text-align: center;
             padding: 15px 20px;
