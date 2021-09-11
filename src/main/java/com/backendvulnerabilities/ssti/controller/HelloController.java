@@ -37,12 +37,6 @@ public class HelloController {
 
         model.addAttribute("object", con.getObjectWrapper());
         StringTemplateLoader stringLoader = new StringTemplateLoader();
-        File file = null;
-        try {
-            file = new ClassPathResource("images/maj-litl-poni-4.jpg").getFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         stringLoader.putTemplate("hello.ftl",
                 "<html>\n" +
                 "<body>\n"+
