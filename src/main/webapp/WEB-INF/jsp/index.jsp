@@ -11,7 +11,7 @@
     <style>
         body {
             margin: 0; /* Убираем отступы */
-            height: 100%; /* Высота страницы */
+            height: auto; /* Высота страницы */
             background: url("https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg");
             background-size: cover;
             background-attachment: fixed;
@@ -61,7 +61,7 @@
         <sec:authorize access="isAuthenticated()">
             <a href="/logout">Выйти</a>
         </sec:authorize>
-        <a href="/hello">Главная</a>
+        <a href="/hello">Wiki</a>
         <a href="/news">Форум</a>
     </div>
 </div>
