@@ -41,7 +41,7 @@ public class HelloController {
                 "<html>\n" +
                 "<body>\n"+
                 "<img src=\"https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg\"/>" +
-                        "<h1>Привет " + auth.getName() + "! Рад приветствовать тебя на моей PonyWiki</h1>\n" +
+                        "<h1>Привет " + auth.getName() + "</h1>\n" +
                 "</body>\n" +
                 "</html>");
         con.setTemplateLoader(new MultiTemplateLoader(new TemplateLoader[]{stringLoader,

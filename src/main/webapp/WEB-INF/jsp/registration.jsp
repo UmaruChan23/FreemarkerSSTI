@@ -11,7 +11,9 @@
         margin: 0; /* Убираем отступы */
         height: 100%; /* Высота страницы */
         background: url("https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_GB/hasbro_studios-TV_MLP_FIM_S1-Full-Image_GalleryBackground-en-GB-1524863227706._RI_V8918956fdb3966c471b5063544987401_TTW_.jpg ");
-        background-size: 100%; /* Фон занимает всю доступную площадь */
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-x;
     }
 
     .registration_form {

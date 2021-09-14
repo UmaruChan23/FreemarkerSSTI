@@ -7,13 +7,15 @@
 <head>
     <title>Главная</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/index.css">
     <style>
         body {
             margin: 0; /* Убираем отступы */
             height: 100%; /* Высота страницы */
             background: url("https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg");
-            background-size: 100%; /* Фон занимает всю доступную площадь */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: repeat-x;
         }
 
         .main_container {
@@ -51,7 +53,7 @@
 <body>
 <div class="main_container">
     <div class="top-nav">
-        <h3>${pageContext.request.userPrincipal.name}</h3>
+        <h3></h3>
         <sec:authorize access="!isAuthenticated()">
             <a href="/login">Войти</a>
             <a href="/registration">Зарегистрироваться</a>

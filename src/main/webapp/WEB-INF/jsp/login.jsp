@@ -1,4 +1,5 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
@@ -11,8 +12,11 @@
             margin: 0; /* Убираем отступы */
             height: 100%; /* Высота страницы */
             background: url("https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg");
-            background-size: 100%; /* Фон занимает всю доступную площадь */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: repeat-x;
         }
+
         .login_form {
             position: absolute;
             left: 50%;
@@ -23,8 +27,12 @@
             margin: auto;
         }
 
+        .login_form form {
+            margin: 10px;
+        }
+
         .login_form input {
-            margin-left: 12px;
+            margin-left: 2px;
             color: black;
             text-align: center;
             padding: 15px 20px;
@@ -83,7 +91,7 @@
     <% response.sendRedirect("/"); %>
 </sec:authorize>
 <div class="login_form">
-    <form method="POST" action="/login">
+    <form:form method="POST" action="/login">
         <h2>Вход в систему</h2>
         <div>
             <input name="username" type="text" placeholder="Username"
@@ -97,7 +105,7 @@
             <a href="/registration">Зарегистрироваться</a>
             <a href="/">Главная</a>
         </div>
-    </form>
+    </form:form>
 </div>
 
 </body>

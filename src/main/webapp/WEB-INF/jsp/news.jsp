@@ -12,15 +12,18 @@
         body {
             margin: 0; /* Убираем отступы */
             height: 100%; /* Высота страницы */
-            background: url("https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg");
-            background-size: 100%; /* Фон занимает всю доступную площадь */
+            background: url("https://mlp.my1.ru/_ph/3/562637110.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: repeat-x;
         }
 
         #root_container{
             position: absolute;
-            left: 50%;
+            left: 30%;
             top: 50%;
-            height: 50%;
+            height: 100%;
+            width: 50%;
             transform: translate(-50%,-50%);
             background: #dddddd;
             scroll-behavior: smooth;
