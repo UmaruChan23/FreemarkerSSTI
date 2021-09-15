@@ -96,6 +96,10 @@
                 ${usernameError}
         </div>
         <div>
+            <form:input type="text" path="nickname" placeholder="Nickname"
+                        autofocus="true"></form:input>
+        </div>
+        <div>
             <form:input type="password" path="password" placeholder="Password"></form:input>
         </div>
         <div>

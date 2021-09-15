@@ -18,6 +18,9 @@ public class User implements UserDetails {
     @Column(length = 65535, columnDefinition = "text")
     private String username;
     @Size(min=2, message = "Не меньше 5 знаков")
+    @Column(length = 65535, columnDefinition = "text")
+    private String nickname;
+    @Size(min=2, message = "Не меньше 5 знаков")
     private String password;
     @Transient
     private String passwordConfirm;
@@ -38,6 +41,10 @@ public class User implements UserDetails {
     @Override
     public String getUsername() {
         return username;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 
     @Override
@@ -62,6 +69,10 @@ public class User implements UserDetails {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     @Override

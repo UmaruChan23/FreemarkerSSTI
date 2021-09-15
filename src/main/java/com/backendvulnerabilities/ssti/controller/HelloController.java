@@ -90,7 +90,7 @@ public class HelloController {
                 "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "<h1>Привет " + auth.getName() + "! Рад приветствовать тебя на моей PonyWiki</h1>\n" +
+                "<h1>Привет " + service.getNickname(auth.getName()) + "! Рад приветствовать тебя на моей PonyWiki</h1>\n" +
                 "<div class=\"main_container\">\n" +
                 "    <div class=\"top-nav\">\n" +
                 "        <sec:authorize access=\"isAuthenticated()\">\n" +
