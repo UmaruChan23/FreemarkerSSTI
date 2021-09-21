@@ -99,6 +99,10 @@ public class HelloController {
                 "        <a href=\"/\">Главная</a>\n" +
                 "        <a href=\"/news\">Форум</a>\n" +
                 "    </div>\n" +
+                "<div>\n" +
+                "<video src=\"url:https://youtu.be/fibOPedPvQ4?list=PLX3N4kdGCySlLT8enuZ299u_CziKa82MS\" width=\"600\" height=\"600\" type=\"video/mp4\" controls=\"controls\"  >\t\n" +
+                "</video>\n" +
+                "</div>\n" +
                 "</body>\n" +
                 "</html>";
     }

@@ -42,7 +42,7 @@
             </tr>
         </c:forEach>
     <form method="POST" action="/news">
-        <h2>Оставть комментарий</h2>
+        <h2>Оставить комментарий</h2>
         <div>
             <input name="text" type="text" placeholder="текст"/>
             <button type="submit">Send</button>
