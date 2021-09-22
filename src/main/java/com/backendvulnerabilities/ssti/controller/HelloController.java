@@ -52,14 +52,14 @@ public class HelloController {
                 "        body {\n" +
                 "            margin: 0; /* Убираем отступы */\n" +
                 "            height: 100%; /* Высота страницы */\n" +
-                "            background: url(\"https://smolteddy.ru/wp-content/uploads/2019/04/maj-litl-poni-4.jpg\");\n" +
+                "            background: url(\"https://youtu.be/vzN9ClKgOiw\");\n" +
                 "            background-size: 100%; /* Фон занимает всю доступную площадь */\n" +
                 "        }\n" +
                 "\n" +
                 "        .main_container {\n" +
                 "            position: absolute;\n" +
                 "            left: 50%;\n" +
-                "            top: 0%;\n" +
+                "            top: 1%;\n" +
                 "            transform: translate(-50%, -50%);\n" +
                 "        }\n" +
                 "\n" +
@@ -90,7 +90,7 @@ public class HelloController {
                 "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "<h1>Привет " + service.getNickname(auth.getName()) + "! Рад приветствовать тебя на моей PonyWiki</h1>\n" +
+                "<h1>Привет " + service.getNickname(auth.getName()) + "!</h1>\n" +
                 "<div class=\"main_container\">\n" +
                 "    <div class=\"top-nav\">\n" +
                 "        <sec:authorize access=\"isAuthenticated()\">\n" +
@@ -99,10 +99,6 @@ public class HelloController {
                 "        <a href=\"/\">Главная</a>\n" +
                 "        <a href=\"/news\">Форум</a>\n" +
                 "    </div>\n" +
-                "<div>\n" +
-                "<video src=\"url:https://youtu.be/fibOPedPvQ4?list=PLX3N4kdGCySlLT8enuZ299u_CziKa82MS\" width=\"600\" height=\"600\" type=\"video/mp4\" controls=\"controls\"  >\t\n" +
-                "</video>\n" +
-                "</div>\n" +
                 "</body>\n" +
                 "</html>";
     }
