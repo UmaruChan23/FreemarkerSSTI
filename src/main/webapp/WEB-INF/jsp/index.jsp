@@ -61,7 +61,7 @@
         <sec:authorize access="isAuthenticated()">
             <a href="/logout">Выйти</a>
         </sec:authorize>
-        <a href="/hello">Wiki</a>
+        <a href="/hello">Взбодриться</a>
         <a href="/news">Форум</a>
     </div>
 </div>
