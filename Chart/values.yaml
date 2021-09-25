@@ -1,0 +1,10 @@
+hostname: "pony-ch.mctf-test.serega6531.ru"
+container:
+  image: "cr.yandex/crp00eu9a0rg2m29apm7/starlight_fs:v3"
+  resources:
+    requests:
+      memory: "400Mi"
+      cpu: "200m"
+    limits:
+      memory: "600Mi"
+      cpu: "400m"
