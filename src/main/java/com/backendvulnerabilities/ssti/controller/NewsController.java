@@ -1,7 +1,7 @@
 package com.backendvulnerabilities.ssti.controller;
 
-import com.backendvulnerabilities.ssti.entity.Item;
 import com.backendvulnerabilities.ssti.service.NewsService;
+import freemarker.template.utility.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,7 +19,7 @@ public class NewsController {
     private NewsService newsService;
 
     @GetMapping
-    public String userList(Model model) {
+    public String getChat(Model model) {
         model.addAttribute("allItems", newsService.allItems());
         return "news";
     }
@@ -27,7 +27,7 @@ public class NewsController {
     @PostMapping
     public String addPost(@RequestParam(required = true, defaultValue = "" ) String text) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if(!text.equals("")){
+        if(!text.isBlank()){
             newsService.saveItem(auth.getName(), text);
         }
         return "redirect:/news";
