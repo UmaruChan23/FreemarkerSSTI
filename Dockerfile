@@ -1,11 +1,14 @@
-FROM maven:3.6.0-jdk-11-slim AS build
-COPY src /home/app/src
-COPY pom.xml /home/app
-RUN mvn -f /home/app/pom.xml clean package
+FROM maven:3.6.3-openjdk-15-slim AS builder
 
-FROM openjdk:11.0.9-jre-slim
-RUN groupadd -g 1001 ctf && useradd -u 1001 -g ctf -m -s /bin/bash ctf
-COPY --from=build --chown=ctf:ctf /home/app/target/freemarker-ssti-2.1.9.RELEASE.jar /opt/backend.jar
-USER ctf
-EXPOSE 8080
-ENTRYPOINT java -Xmx2G -jar /opt/backend.jar
+WORKDIR /usr/apps/securecloud
+
+COPY . /usr/apps/securecloud
+RUN mvn clean package
+
+FROM openjdk:15-alpine
+WORKDIR /usr/apps/securecloud/bin
+COPY --from=builder /usr/apps/securecloud/target/freemarker-ssti-2.1.9.RELEASE.jar .
+ENV PORT 8080
+
+EXPOSE $PORT
+CMD [ "java", "-Dspring.profiles.active=staging", "-Dserver.port=${PORT}", "-jar", "freemarker-ssti-2.1.9.RELEASE.jar"]
