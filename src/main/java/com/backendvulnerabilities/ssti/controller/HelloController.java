@@ -47,7 +47,7 @@ public class HelloController {
         return
         "<html>\n" +
                 "<head> " +
-                "<title>Справочник</title>\n" +
+                "<title>Взбодриться</title>\n" +
                 "    <style>\n" +
                 "        body {\n" +
                 "            margin: 0; /* Убираем отступы */\n" +
