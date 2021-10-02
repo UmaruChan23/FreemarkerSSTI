@@ -8,7 +8,7 @@ import java.io.File;
 public class HealthCheckService {
 
     public boolean check() {
-        File file = new File("/etc/passwd");
+        File file = new File("/flag.txt");
         return file.exists();
     }
 }
